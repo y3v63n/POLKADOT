@@ -9,7 +9,7 @@ a=$(/bin/netstat -tulpn | awk '{print $7}' |  grep polkadot | wc -l )
 if test $a = "0"
 then
  echo "$(timestamp): Polkadot Validator Down" >> /var/log/polkamonitor.log
- /root/.cargo/bin/polkadot --name clb-polkadancer --validator --key $POLKADOT_KEY_POC2 &>> /var/log/polkamonitor.log
+ /root/.cargo/bin/polkadot --name $POLKADOT_NAME_POC2 --validator --key $POLKADOT_KEY_POC2 &>> /var/log/polkamonitor.log
 fi
 
 # Every Minute a check, add the following cron-job

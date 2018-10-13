@@ -12,13 +12,13 @@ RUN curl https://sh.rustup.rs -sSf | sh -s -- -y && \
 RUN	mkdir -p /root/.local/share/Polkadot
 
 # SSHGuard
-RUN apt-get update && \
-    apt-get install -y sshguard  && \
-    iptables -N sshguard  && \
-    ip6tables -N sshguard  && \
-    iptables -A INPUT -j sshguard  && \
-    ip6tables -A INPUT -j sshguard  && \
-    service sshguard restart
+#RUN apt-get update && \
+#    apt-get install -y sshguard  && \
+#    iptables -N sshguard  && \
+#    ip6tables -N sshguard  && \
+#    iptables -A INPUT -j sshguard  && \
+#    ip6tables -A INPUT -j sshguard  && \
+#    service sshguard restart
 
 EXPOSE 30333 9933 9944
 VOLUME ["/root/.local/share/Polkadot"]
