@@ -24,3 +24,4 @@ EXPOSE 30333 9933 9944
 VOLUME ["/root/.local/share/Polkadot"]
 
 CMD ["/root/.cargo/bin/polkadot"]
+
