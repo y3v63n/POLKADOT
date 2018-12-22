@@ -8,7 +8,7 @@ RUN apt-get update && \
 # Install polkadot
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y && \
 	export PATH=$PATH:$HOME/.cargo/bin && \
-	cargo install --git https://github.com/paritytech/substrate.git --branch v0.2 polkadot
+	cargo install --git https://github.com/paritytech/substrate.git --branch v0.3 polkadot
 RUN	mkdir -p /root/.local/share/Polkadot
 
 # SSHGuard
